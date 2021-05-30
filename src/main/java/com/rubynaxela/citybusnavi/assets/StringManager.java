@@ -17,8 +17,9 @@ import java.util.Objects;
 public final class StringManager {
 
     private static final String
-            LOAD_ERROR_MESSAGE = "Attempt to read language file has resulted an unhandled error.",
+            LANG_FILE_LOAD_ERROR = "Attempt to read language file has resulted an unhandled error.",
             LANG_PREFIX = "lang.",
+            STRINGS_FILE_LOAD_ERROR = "Attempt to read strings file has resulted an unhandled error.",
             STRING_PREFIX = "string.";
     private Language usedLanguage;
     private Map<String, String> primaryDictionary, backupDictionary, strings;
@@ -36,7 +37,7 @@ public final class StringManager {
                     "/strings.json"), Map.class);
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println(LOAD_ERROR_MESSAGE);
+            System.err.println(STRINGS_FILE_LOAD_ERROR);
         }
 
         // Loading language files
@@ -45,7 +46,7 @@ public final class StringManager {
                     "/lang/" + Language.ENGLISH_US.getCode() + ".json"), Map.class);
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println(LOAD_ERROR_MESSAGE);
+            System.err.println(LANG_FILE_LOAD_ERROR);
         }
         try {
             primaryDictionary = jsonMapper.readValue(CityBusNavi.class.getResource(

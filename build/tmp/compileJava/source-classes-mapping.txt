@@ -1,9 +1,9 @@
 com/rubynaxela/citybusnavi/gui/components/RouteStopTimetable.java
  com.rubynaxela.citybusnavi.gui.components.RouteStopTimetable
-com/rubynaxela/citybusnavi/commands/CommandHandler.java
- com.rubynaxela.citybusnavi.commands.CommandHandler
-com/rubynaxela/citybusnavi/gui/DialogHandler.java
- com.rubynaxela.citybusnavi.gui.DialogHandler
+com/rubynaxela/citybusnavi/data/datatypes/auxiliary/Pair.java
+ com.rubynaxela.citybusnavi.data.datatypes.auxiliary.Pair
+com/rubynaxela/citybusnavi/data/DatabaseAccessor.java
+ com.rubynaxela.citybusnavi.data.DatabaseAccessor
 com/rubynaxela/citybusnavi/data/datatypes/gtfs/StopTime.java
  com.rubynaxela.citybusnavi.data.datatypes.gtfs.StopTime
 com/rubynaxela/citybusnavi/gui/components/MainWindow.java
@@ -45,9 +45,9 @@ com/rubynaxela/citybusnavi/assets/IconManager.java
  com.rubynaxela.citybusnavi.assets.IconManager$1
 com/rubynaxela/citybusnavi/data/datatypes/derived/TripSchedule.java
  com.rubynaxela.citybusnavi.data.datatypes.derived.TripSchedule
-com/rubynaxela/citybusnavi/gui/GUIManager.java
- com.rubynaxela.citybusnavi.gui.GUIManager
- com.rubynaxela.citybusnavi.gui.GUIManager$1
+com/rubynaxela/citybusnavi/data/datatypes/gtfs/Route.java
+ com.rubynaxela.citybusnavi.data.datatypes.gtfs.Route
+ com.rubynaxela.citybusnavi.data.datatypes.gtfs.Route$RouteType
 com/rubynaxela/citybusnavi/data/Database.java
  com.rubynaxela.citybusnavi.data.Database
 com/rubynaxela/citybusnavi/io/Directory.java
@@ -58,8 +58,9 @@ com/rubynaxela/citybusnavi/gui/components/renderers/StopsList.java
  com.rubynaxela.citybusnavi.gui.components.renderers.StopsList
 com/rubynaxela/citybusnavi/data/datatypes/gtfs/CalendarEntry.java
  com.rubynaxela.citybusnavi.data.datatypes.gtfs.CalendarEntry
-com/rubynaxela/citybusnavi/CityBusNavi.java
- com.rubynaxela.citybusnavi.CityBusNavi
+com/rubynaxela/citybusnavi/util/OsCheck.java
+ com.rubynaxela.citybusnavi.util.OsCheck
+ com.rubynaxela.citybusnavi.util.OsCheck$OSType
 com/rubynaxela/citybusnavi/gui/html/BasicDocument.java
  com.rubynaxela.citybusnavi.gui.html.BasicDocument
 com/rubynaxela/citybusnavi/data/datatypes/gtfs/Stop.java
@@ -78,8 +79,8 @@ com/rubynaxela/citybusnavi/gui/components/renderers/RouteButton.java
  com.rubynaxela.citybusnavi.gui.components.renderers.RouteButton
 com/rubynaxela/citybusnavi/gui/components/RouteStopsListPanel.java
  com.rubynaxela.citybusnavi.gui.components.RouteStopsListPanel
-com/rubynaxela/citybusnavi/commands/DataProcessor.java
- com.rubynaxela.citybusnavi.commands.DataProcessor
+com/rubynaxela/citybusnavi/gui/components/RouteStopSelectionWindow.java
+ com.rubynaxela.citybusnavi.gui.components.RouteStopSelectionWindow
 com/rubynaxela/citybusnavi/data/datatypes/gtfs/ShapePoint.java
  com.rubynaxela.citybusnavi.data.datatypes.gtfs.ShapePoint
 com/rubynaxela/citybusnavi/data/datatypes/derived/Shape.java
@@ -90,21 +91,20 @@ com/rubynaxela/citybusnavi/data/datatypes/auxiliary/WeekDay.java
  com.rubynaxela.citybusnavi.data.datatypes.auxiliary.WeekDay
 com/rubynaxela/citybusnavi/gui/components/std/DefaultJPanel.java
  com.rubynaxela.citybusnavi.gui.components.std.DefaultJPanel
-com/rubynaxela/citybusnavi/data/datatypes/gtfs/Route.java
- com.rubynaxela.citybusnavi.data.datatypes.gtfs.Route
- com.rubynaxela.citybusnavi.data.datatypes.gtfs.Route$RouteType
-com/rubynaxela/citybusnavi/data/DatabaseController.java
- com.rubynaxela.citybusnavi.data.DatabaseController
-com/rubynaxela/citybusnavi/data/DatabaseAccessor.java
- com.rubynaxela.citybusnavi.data.DatabaseAccessor
+com/rubynaxela/citybusnavi/commands/CommandHandler.java
+ com.rubynaxela.citybusnavi.commands.CommandHandler
+com/rubynaxela/citybusnavi/gui/DialogHandler.java
+ com.rubynaxela.citybusnavi.gui.DialogHandler
+com/rubynaxela/citybusnavi/commands/DataProcessor.java
+ com.rubynaxela.citybusnavi.commands.DataProcessor
+com/rubynaxela/citybusnavi/CityBusNavi.java
+ com.rubynaxela.citybusnavi.CityBusNavi
 com/rubynaxela/citybusnavi/assets/StringManager.java
  com.rubynaxela.citybusnavi.assets.StringManager
-com/rubynaxela/citybusnavi/util/OsCheck.java
- com.rubynaxela.citybusnavi.util.OsCheck
- com.rubynaxela.citybusnavi.util.OsCheck$OSType
-com/rubynaxela/citybusnavi/gui/components/RouteStopSelectionWindow.java
- com.rubynaxela.citybusnavi.gui.components.RouteStopSelectionWindow
 com/rubynaxela/citybusnavi/io/IOHandler.java
  com.rubynaxela.citybusnavi.io.IOHandler
-com/rubynaxela/citybusnavi/data/datatypes/auxiliary/Pair.java
- com.rubynaxela.citybusnavi.data.datatypes.auxiliary.Pair
+com/rubynaxela/citybusnavi/gui/GUIManager.java
+ com.rubynaxela.citybusnavi.gui.GUIManager
+ com.rubynaxela.citybusnavi.gui.GUIManager$1
+com/rubynaxela/citybusnavi/data/DatabaseController.java
+ com.rubynaxela.citybusnavi.data.DatabaseController
