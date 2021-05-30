@@ -35,6 +35,9 @@
 # File-based project format
 *.iws
 
+# Apple .DS_Store files
+.DS_Store
+
 # IntelliJ
 out/
 
