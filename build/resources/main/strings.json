@@ -1,7 +1,0 @@
-{
-  "app.title": "CityBusNavi",
-  "export_file.name": "export_ztm.kml",
-  "gtfs_file.directory": "ZTMPoznanGTFS",
-  "gtfs_file.name": "ZTMPoznanGTFS.zip",
-  "gtfs_file.url": "https://www.ztm.poznan.pl/pl/dla-deweloperow/getGTFSFile"
-}
