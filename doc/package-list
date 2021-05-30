@@ -1,0 +1,15 @@
+com.rubynaxela.citybusnavi
+com.rubynaxela.citybusnavi.assets
+com.rubynaxela.citybusnavi.commands
+com.rubynaxela.citybusnavi.data
+com.rubynaxela.citybusnavi.data.datatypes.auxiliary
+com.rubynaxela.citybusnavi.data.datatypes.derived
+com.rubynaxela.citybusnavi.data.datatypes.gtfs
+com.rubynaxela.citybusnavi.gui
+com.rubynaxela.citybusnavi.gui.components
+com.rubynaxela.citybusnavi.gui.components.renderers
+com.rubynaxela.citybusnavi.gui.components.std
+com.rubynaxela.citybusnavi.gui.html
+com.rubynaxela.citybusnavi.io
+com.rubynaxela.citybusnavi.kml
+com.rubynaxela.citybusnavi.util

@@ -257,7 +257,8 @@ public final class DatabaseController {
     }
 
     /**
-     * Loads all database entries from the CSV data files
+     * Loads all database entries from the CSV data files. If at least
+     * one of the files is not present, performs a full data update
      */
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public void loadAll() {
