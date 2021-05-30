@@ -13,7 +13,6 @@ import com.rubynaxela.citybusnavi.data.datatypes.gtfs.*;
 import com.rubynaxela.citybusnavi.gui.DialogHandler;
 import com.rubynaxela.citybusnavi.io.Directory;
 import com.rubynaxela.citybusnavi.io.IOHandler;
-import com.rubynaxela.citybusnavi.util.CSVParser;
 import com.rubynaxela.citybusnavi.util.Utils;
 
 import java.awt.*;
