@@ -9,8 +9,9 @@ import com.rubynaxela.citybusnavi.gui.components.std.DefaultJFrame;
 public final class MainWindow extends DefaultJFrame {
 
     public final DefaultJButton updateButton = new DefaultJButton();
-    public final DefaultJButton demoButton = new DefaultJButton();
-    public final DefaultJButton openScheduleButton = new DefaultJButton();
+    public final DefaultJButton demoMapButton = new DefaultJButton();
+    public final DefaultJButton openLineScheduleButton = new DefaultJButton();
+    public final DefaultJButton openStopScheduleButton = new DefaultJButton();
 
     public MainWindow() {
         super(true);

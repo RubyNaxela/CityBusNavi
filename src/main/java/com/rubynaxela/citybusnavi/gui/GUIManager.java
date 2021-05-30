@@ -104,15 +104,20 @@ public final class GUIManager {
         window.updateButton.setFontSize(15);
         window.updateButton.addActionListener(ev -> lockMainWindowUntilDone(commandHandler::updateSchedule));
 
-        window.register(window.demoButton, gridElementSettings(1, 0));
-        window.demoButton.setText(stringManager.get("lang.button.create_demo"));
-        window.demoButton.setFontSize(15);
-        window.demoButton.addActionListener(ev -> commandHandler.createDemoKMLFile());
+        window.register(window.demoMapButton, gridElementSettings(1, 0));
+        window.demoMapButton.setText(stringManager.get("lang.button.create_demo"));
+        window.demoMapButton.setFontSize(15);
+        window.demoMapButton.addActionListener(ev -> commandHandler.createDemoKMLFile());
 
-        window.register(window.openScheduleButton, gridElementSettings(2, 0));
-        window.openScheduleButton.setText(stringManager.get("lang.button.open_schedule"));
-        window.openScheduleButton.setFontSize(15);
-        window.openScheduleButton.addActionListener(ev -> initRouteSelectionWindow());
+        window.register(window.openLineScheduleButton, gridElementSettings(2, 0));
+        window.openLineScheduleButton.setText(stringManager.get("lang.button.open_line_schedule"));
+        window.openLineScheduleButton.setFontSize(15);
+        window.openLineScheduleButton.addActionListener(ev -> initRouteSelectionWindow());
+
+        window.register(window.openStopScheduleButton, gridElementSettings(3, 0));
+        window.openStopScheduleButton.setText(stringManager.get("lang.button.open_stop_schedule"));
+        window.openStopScheduleButton.setFontSize(15);
+        window.openStopScheduleButton.addActionListener(ev -> {});
 
         window.pack();
     }

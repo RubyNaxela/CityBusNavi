@@ -1,9 +1,10 @@
 {
   "button.cancel": "Cancel",
-  "button.create_demo": "Create a demo file",
+  "button.create_demo": "Create a demo map file",
   "button.no": "No",
   "button.ok": "OK",
-  "button.open_schedule": "Open schedule",
+  "button.open_line_schedule": "Open line schedule",
+  "button.open_stop_schedule": "Open stop schedule",
   "button.yes": "Yes",
   "button.update_schedule": "Update schedule",
   "dialog.file_chooser.file_to_open": "Opem file",
