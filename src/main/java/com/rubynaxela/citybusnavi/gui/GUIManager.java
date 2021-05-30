@@ -128,7 +128,6 @@ public final class GUIManager {
 
     public void lockMainWindowUntilDone(Runnable action) {
         lockMainWindow(true);
-
         action.run();
         lockMainWindow(false);
     }

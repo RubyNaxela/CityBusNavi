@@ -259,6 +259,7 @@ public final class DatabaseController {
     /**
      * Loads all database entries from the CSV data files
      */
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public void loadAll() {
         final Directory dataDirectory = new Directory(stringManager.get("string.gtfs_file.directory"));
         final File stopsFile = new File(dataDirectory, "stops.csv"),
@@ -267,6 +268,9 @@ public final class DatabaseController {
                 tripsFile = new File(dataDirectory, "trips.csv"),
                 tripSchedulesFile = new File(dataDirectory, "stop_times.csv"),
                 calendarFile = new File(dataDirectory, "calendar.csv");
+        if (!dataDirectory.exists()) {
+            dataDirectory.mkdirs();
+        }
         if (!stopsFile.exists() || !shapesFile.exists() || !routesFile.exists() ||
                 !tripsFile.exists() || !tripSchedulesFile.exists() || !calendarFile.exists()) {
             try {
