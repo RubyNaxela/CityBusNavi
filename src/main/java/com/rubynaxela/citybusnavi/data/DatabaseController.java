@@ -4,20 +4,23 @@ import com.rubynaxela.citybusnavi.CityBusNavi;
 import com.rubynaxela.citybusnavi.assets.StringManager;
 import com.rubynaxela.citybusnavi.data.datatypes.auxiliary.GeoPoint;
 import com.rubynaxela.citybusnavi.data.datatypes.auxiliary.Time48h;
-import com.rubynaxela.citybusnavi.data.datatypes.derived.Shape;
 import com.rubynaxela.citybusnavi.data.datatypes.auxiliary.Trilean;
 import com.rubynaxela.citybusnavi.data.datatypes.derived.Calendar;
+import com.rubynaxela.citybusnavi.data.datatypes.derived.Shape;
 import com.rubynaxela.citybusnavi.data.datatypes.derived.TripSchedule;
 import com.rubynaxela.citybusnavi.data.datatypes.derived.Zone;
 import com.rubynaxela.citybusnavi.data.datatypes.gtfs.*;
 import com.rubynaxela.citybusnavi.gui.DialogHandler;
 import com.rubynaxela.citybusnavi.io.Directory;
+import com.rubynaxela.citybusnavi.io.IOHandler;
 import com.rubynaxela.citybusnavi.util.CSVParser;
 import com.rubynaxela.citybusnavi.util.Utils;
 
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -25,6 +28,7 @@ import java.util.LinkedHashMap;
 public final class DatabaseController {
 
     private final StringManager stringManager;
+    private final IOHandler ioHandler;
     private final DialogHandler dialogHandler;
 
     private final Database database;
@@ -32,6 +36,7 @@ public final class DatabaseController {
     public DatabaseController(Database database, CityBusNavi instance) {
         this.database = database;
         stringManager = instance.getStringManager();
+        ioHandler = instance.getIOHandler();
         dialogHandler = instance.getDialogHandler();
     }
 
@@ -256,11 +261,27 @@ public final class DatabaseController {
      */
     public void loadAll() {
         final Directory dataDirectory = new Directory(stringManager.get("string.gtfs_file.directory"));
-        loadStops(new File(dataDirectory, "stops.csv"));
-        loadShapes(new File(dataDirectory, "shapes.csv"));
-        loadRoutes(new File(dataDirectory, "routes.csv"));
-        loadTrips(new File(dataDirectory, "trips.csv"));
-        loadTripSchedules(new File(dataDirectory, "stop_times.csv"));
-        loadCalendar(new File(dataDirectory, "calendar.csv"));
+        final File stopsFile = new File(dataDirectory, "stops.csv"),
+                shapesFile = new File(dataDirectory, "shapes.csv"),
+                routesFile = new File(dataDirectory, "routes.csv"),
+                tripsFile = new File(dataDirectory, "trips.csv"),
+                tripSchedulesFile = new File(dataDirectory, "stop_times.csv"),
+                calendarFile = new File(dataDirectory, "calendar.csv");
+        if (!stopsFile.exists() || !shapesFile.exists() || !routesFile.exists() ||
+                !tripsFile.exists() || !tripSchedulesFile.exists() || !calendarFile.exists()) {
+            try {
+                ioHandler.retrieveGTFSData(new URL(stringManager.get("string.gtfs_file.url")),
+                        new File(stringManager.get("string.gtfs_file.directory"), stringManager.get("string.gtfs_file.name")));
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                dialogHandler.showError(stringManager.get("lang.error.server_connection"));
+            }
+        }
+        loadStops(stopsFile);
+        loadShapes(shapesFile);
+        loadRoutes(routesFile);
+        loadTrips(tripsFile);
+        loadTripSchedules(tripSchedulesFile);
+        loadCalendar(calendarFile);
     }
 }

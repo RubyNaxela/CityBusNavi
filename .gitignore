@@ -99,4 +99,7 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
+# Custom locations
+ZTMPoznanGTFS/**
+
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij
